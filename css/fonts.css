@@ -6,19 +6,7 @@
 
 @font-face {
     font-family: 'Raleway';
-    src: url('../assets/fonts/Raleway/Raleway-regular.ttf')  format('truetype'); /* Safari, Android, iOS */
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('../assets/fonts/Raleway/Raleway-medium.ttf')  format('truetype'); /* Safari, Android, iOS */
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('../assets/fonts/Raleway/Raleway-bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    src: url('../assets/fonts/Raleway/Raleway-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
     font-weight: 700;
 }
 @font-face {
