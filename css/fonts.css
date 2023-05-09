@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../assets/fonts/Raleway/Raleway-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../assets/fonts/Raleway/Raleway-regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../assets/fonts/Raleway/Raleway-medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../assets/fonts/Raleway/Raleway-bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../assets/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+}   
