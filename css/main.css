@@ -27,7 +27,7 @@ img {
 }
 .nav-menu-list li {
     margin-right: 38px;
-    font-weight: 900;
+    font-weight: 700;
 }
 .nav-menu-list li:last-child {
     margin-right: 0px;
@@ -167,7 +167,7 @@ img {
     flex-wrap: wrap;
     text-align: center;
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 700;
 }
 .button-icon {
     width: 100px;
@@ -323,7 +323,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 900;
+    font-weight: 700;
 }
 .blog-item-description {
     z-index: 2;
@@ -453,7 +453,7 @@ footer {
 }
 .footer-love {
     color: #f52b55;
-    font-weight: 900;
+    font-weight: 700;
 }
 .footer-policy {
     font-size: 16px;
