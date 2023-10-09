@@ -7,32 +7,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
+   
 </head>
 <body>
-    
-    <section class="fresh-life">
-        <nav class="page-nav">
-            <div class="container">
-                <div class="nav-line">
-                    <div class="logo">
-                        <h2>Cakee</h2>
-                    </div>
-                    <div class="nav-menu">
-                        <ul class="nav-menu-list">
-                            <li>HOME</li>
-                            <li>ABOUT</li>
-                            <li>SERVICES</li>
-                            <li>GALLERY</li>
-                            <li>BLOG</li>
-                            <li>CONTACT</li>
-                        </ul>
-                    </div>
+    <div class="scroll-tracker"></div>
+    <nav id="navigation" class="page-nav">
+        <div class="container">
+            <div class="nav-line">
+                <div class="logo">
+                    <h2>Cakee</h2>
                 </div>
-            </div>    
-        </nav>
+                <div class="nav-menu">
+                    <ul class="nav-menu-list">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#about_us"  >ABOUT</a></li>
+                        <li><a href="#our_services"  >SERVICES</a></li>
+                        <li><a href="#gallery"  >GALLERY</a></li>
+                        <li><a href="#blog"  >BLOG</a></li>
+                        <li><a href="#contact" >CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+    </nav>
+    <section class="fresh-life section">
         <div class="container">
             <div class="fresh-life-content-container">
-                <div class="fresh-life-content">
+                <div class="fresh-life-content hidden">
                     <div class="fresh-life-headline">
                         <h2>Fresh Life</h2>
                     </div>
@@ -43,21 +44,19 @@
                     <div class="fresh-life-button">
                         GET FREE NOW
                     </div>
-                    <div class="scroll-icon">
-                        <img src="images/scroll-icon.png">
-                    </div>
+             
                 </div>
                 
             </div>
         </div>
     </section>
-    <section class="about-us">
+    <section id="about_us" class="about-us section">
         <div class="container">
             <div class="about-us-content">
                 <div class="about-us-img">
                     <img src="images/cup.png">
                 </div>
-                <div class="about-us-description">
+                <div class="about-us-description hidden">
                     <div class="about-us-headline">
                         <h2>About Us</h2>
                     </div>
@@ -68,7 +67,7 @@
             </div>
         </div>
     </section>
-    <section class="our-services">
+    <section id="our_services" class="our-services section">
         <div class="container">
             <div class="our-services-content">
                 <div class="our-service-menu">
@@ -113,7 +112,7 @@
         </div>
 
     </section>
-    <section class="gallery">
+    <section id="gallery" class="gallery section">
         <div class="container">
             <div class="gallery-content">
                 <div class="gallery-title">
@@ -147,7 +146,7 @@
             </div>
         </div>
     </section>
-    <section class="subscribe">
+    <section id="subscribe" class="subscribe section">
         <div class="container">
             <div class="subscribe-container">
                 <div class="subscribe-content">
@@ -169,7 +168,7 @@
             </div> 
         </div>
     </section>
-    <section class="blog">
+    <section id="blog" class="blog section">
         <div class="container">
             <div class="blog-content-container">
                 <div class="blog-content">
@@ -243,7 +242,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content-container">
                 <div class="contact-title-paragraph">
@@ -301,6 +300,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="my_script.js"></script>
 </body>
 </html>
