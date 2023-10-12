@@ -10,39 +10,40 @@
    
 </head>
 <body>
-    <div class="scroll-tracker"></div>
     <nav id="navigation" class="page-nav">
         <div class="container">
             <div class="nav-line">
-                <div class="logo">
-                    <h2>Cakee</h2>
-                </div>
+                <a href="#" class="logo">
+                    <img src="./assets/svg/default-monochrome-black.svg" alt="logo" />
+                
+                </a>
                 <div class="nav-menu">
                     <ul class="nav-menu-list">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#about_us"  >ABOUT</a></li>
-                        <li><a href="#our_services"  >SERVICES</a></li>
-                        <li><a href="#gallery"  >GALLERY</a></li>
-                        <li><a href="#blog"  >BLOG</a></li>
-                        <li><a href="#contact" >CONTACT</a></li>
+                        <li class="menu-element"><a href="#">HOME</a></li>
+                        <li class="menu-element"><a href="#about-us"  >ABOUT</a></li>
+                        <li class="menu-element"><a href="#our-services"  >SERVICES</a></li>
+                        <li class="menu-element"><a href="#gallery"  >GALLERY</a></li>
+                        <li class="menu-element"><a href="#newsletter"  >NEWSLETTER</a></li>
+                        <li class="menu-element"><a href="#blog"  >BLOG</a></li>
+                        <li class="menu-element"><a href="#contact" >CONTACT</a></li>
                     </ul>
                 </div>
             </div>
         </div>    
     </nav>
-    <section class="fresh-life section">
+    <section id="fresh-life" class="fresh-life section">
         <div class="container">
             <div class="fresh-life-content-container">
-                <div class="fresh-life-content hidden">
+                <div class="fresh-life-content hidden-hero">
                     <div class="fresh-life-headline">
                         <h2>Fresh Life</h2>
                     </div>
                     <div class="fresh-life-description">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora quisquam suscipit eius maxime hic eligendi minima 
-                        </p>
+                        <q>Nurture your soul and flourish in the garden of possibilities with Fresh Life 
+                        </q>
                     </div>
                     <div class="fresh-life-button">
-                        GET FREE NOW
+                        <a href="#about-us">Let's Start</a>
                     </div>
              
                 </div>
@@ -50,28 +51,28 @@
             </div>
         </div>
     </section>
-    <section id="about_us" class="about-us section">
+    <section id="about-us" class="about-us section">
         <div class="container">
             <div class="about-us-content">
                 <div class="about-us-img">
                     <img src="images/cup.png">
                 </div>
-                <div class="about-us-description hidden">
+                <div class="about-us-description hidden-right">
                     <div class="about-us-headline">
                         <h2>About Us</h2>
                     </div>
                     <div class="about-us-paragraph">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Add, reiciendis magni officia repellat doloribus, illum corrupti similique quos quo assumenda error. Natus itaque sint voluptatibus? Dignissimos  </p>
+                        <p>At Fresh Life, we are dedicated to helping you cultivate a life that's vibrant and meaningful. We believe in the power of positivity, personal development, and embracing every day as a fresh start. Our mission is to inspire and support you on your journey towards a happier, healthier, and more fulfilling life.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="our_services" class="our-services section">
+    <section id="our-services" class="our-services section">
         <div class="container">
             <div class="our-services-content">
                 <div class="our-service-menu">
-                    <div class="our-service-button">
+                    <div class="our-service-button hidden-left">
                         <div class="button-content">
                             <p>Online Shopping</p>
                         </div>
@@ -79,7 +80,7 @@
                             <img src="images/trolley-icon.png">
                         </div>
                     </div>
-                    <div class="our-service-button">
+                    <div class="our-service-button hidden-left">
                         <div class="button-content">
                             <p>Quality Product</p>
                         </div>
@@ -87,7 +88,7 @@
                             <img src="images/icon2.png">
                         </div>
                     </div>
-                    <div class="our-service-button">
+                    <div class="our-service-button hidden-left">
                         <div class="button-content">
                             <p>Domestic & International Delivery</p>
                         </div>
@@ -95,7 +96,7 @@
                             <img src="images/icon3.png">
                         </div>
                     </div>
-                    <div class="our-service-button">
+                    <div class="our-service-button hidden-left">
                         <div class="button-content">
                             <p>Well Organized</p>
                         </div>
@@ -119,7 +120,7 @@
                     <h2>Gallery</h2>
                 </div>
                 <div class="gallery-paragraph">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet eaque repudiandae omnis numquam facilis eos facere, eum ex excepturi aperiam. Voluptatibus deserunt placeat nam libero repellendus quis alias, iste consectetur.</p>
+                    <p>Explore our diverse gallery, showcasing a dynamic fusion of sports and the art of healthy culinary creations. Witness the energy of various sports activities alongside the visual feast of nutritious dishes. We celebrate the harmony between an active lifestyle and a wholesome diet, highlighting the essence of holistic well-being.</p>
                 </div>
                 <div class="gallery-images">
                     <div class="gallery-item1 gallery-img">
@@ -140,21 +141,21 @@
                         <img src="images/item4.png">
                     </div>
                 </div>
-                <div class="gallery-view-more">
+                <!-- <div class="gallery-view-more">
                     VIEW MORE
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
-    <section id="subscribe" class="subscribe section">
+    <section id="newsletter" class="subscribe section">
         <div class="container">
             <div class="subscribe-container">
                 <div class="subscribe-content">
                     <div class="subscribe-title">
-                        <h2>Subscribe To Us</h2>
+                        <h2>Newsletter</h2>
                     </div>
                     <div class="subscribe-paragraph">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi necessitatibus neque nulla vitae id aliquam numquam a.</p>
+                        <p>Subscribe to Fresh Life and enjoy exclusive access to our newsletter. Receive early insights into personal growth tools, curated content, and a supportive community of like-minded individuals. With our newsletter, you'll stay motivated and informed, making each day your best day.</p>
                     </div>
                     <div class="subscribe-form">
                         <div class="subscribe-email">
@@ -176,10 +177,10 @@
                         <h2>Blog</h2>
                     </div>
                     <div class="blog-paragraph">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis sequi quo numquam, dicta impedit distinctio culpa, neque dolore cupiditate blanditiis labore nam quod necessitatibus.</p>
+                        <p>Fresh Life's blog is your culinary and wellness hub. Discover nutritious recipes, wellness tips, and lifestyle insights. Embrace a healthier, tastier life with us!</p>
                     </div>
                     <div class="blog-gallery">
-                        <div class="blog-gallery-item">
+                        <div class="blog-gallery-item hidden-down">
                             <div class="gallery-item-gradient">
 
                             </div>
@@ -193,11 +194,11 @@
                                 </div>   
                             </div>
                             <div class="blog-item-description">
-                                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                                <p class="gallery-item-sign">By Tomek - 2 hours ago</p>
+                                <h3>Green Goodness: The Ultimate Vegetable Shake Recipe</h3>
+                                <p class="gallery-item-sign">By Adam - 2 hours ago</p>
                             </div>
                         </div>
-                        <div class="blog-gallery-item">
+                        <div class="blog-gallery-item hidden-down">
                             <div class="gallery-item-gradient">
                                 
                             </div>
@@ -206,16 +207,16 @@
                             </div>
                             <div class="blog-item-date-container">
                                 <div class="blog-item-date">
-                                    <p>14</p>
+                                    <p>17</p>
                                     <p>NOV</p>
                                 </div>   
                             </div>
                             <div class="blog-item-description">
-                                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                                <p class="gallery-item-sign">By Tomek - 2 hours ago</p>
+                                <h3>Pea Passion: Dive into the Delightful World of Pea Soup</h3>
+                                <p class="gallery-item-sign">By Roman - 3 days ago</p>
                             </div>
                         </div>
-                        <div class="blog-gallery-item">
+                        <div class="blog-gallery-item hidden-down">
                             <div class="gallery-item-gradient">
                                 
                             </div>
@@ -224,25 +225,25 @@
                             </div>
                             <div class="blog-item-date-container">
                                 <div class="blog-item-date">
-                                    <p>10</p>
+                                    <p>13</p>
                                     <p>NOV</p>
                                 </div>   
                             </div>
                             <div class="blog-item-description">
-                                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                                <p class="gallery-item-sign">By Tomek - 2 hours ago</p>
+                                <h3>Bountiful Berries: Exploring the Sweet Joys of Fresh Raspberries</h3>
+                                <p class="gallery-item-sign">By Tomek - 1 week ago</p>
                             </div>
                         </div>
                     
                     </div>
                     <div class="blog-gallery-view">
-                        <p>VIEW MORE</p>
+                        <p>Start reading</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section">
         <div class="container">
             <div class="contact-content-container">
                 <div class="contact-title-paragraph">
@@ -300,6 +301,7 @@
             </div>
         </div>
     </footer>
-    <script src="my_script.js"></script>
+    <script src="./js/helpers.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

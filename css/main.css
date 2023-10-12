@@ -10,32 +10,49 @@ html {
 body {
   font-family: "Raleway";
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 img {
   max-width: 100%;
 }
-
+q {
+  font-style: italic;
+}
+a {
+  text-decoration: none;
+  color:black
+}
 .container {
   width: 100%;
   margin: 0 auto;
 }
-.scroll-tracker {
-    height:5px;
-    position: fixed;
-    background-color: #167777;
-    inset:0 0 auto;
-    z-index: 1000;
-
-}
 .section {
     scroll-margin-top: 100px;
 }
-.hidden {
+.hidden-hero {
+  opacity:0;
+  filter:blur(5px);
+  transform:translateX(-15%);
+  transition: transform 0.7s, filter 0.7s, opacity 2s;
+}
+.hidden-left {
   opacity:0;
   filter:blur(5px);
   transform:translateX(-50%);
-  transition: transform 0.7s, filter 1s, opacity 2s;
+  transition: transform 0.7s, filter 0.7s, opacity 2s;
+}
+.hidden-right {
+  opacity:0;
+  filter:blur(5px);
+  transform:translateX(50%);
+  transition: transform 0.7s, filter 0.7s, opacity 2s;
+}
+.hidden-down {
+  opacity:0;
+  filter:blur(5px);
+  transform:translateY(50%);
+  transition: transform 0.7s, filter 0.7s, opacity 2s;
 }
 .show {
     opacity:1;
@@ -44,7 +61,7 @@ img {
 }
 .page-nav {
   position: sticky;
-  top: 5px;
+  top:0;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
   z-index: 10;
@@ -62,11 +79,11 @@ img {
   margin-right: 38px;
   font-weight: 700;
 }
-.nav-menu-list a {
-  text-decoration: none;
-  color: black;
-}
+
 .nav-menu-list a:hover {
+  color: #00b0b0;
+}
+.active a {
   color: #00b0b0;
   border-bottom: 2px solid #00b0b0;
 }
@@ -87,8 +104,9 @@ img {
 }
 
 .logo {
-  font-family: "Pacifico";
-  font-size: 30px;
+  width:200px;
+  display:flex;
+  align-items: center;
 }
 .fresh-life {
   background-image: url("../images/fresh-life-background.png");
@@ -109,7 +127,7 @@ img {
 }
 .fresh-life-description {
   width: 370px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   font-size: 17px;
 }
 .fresh-life-button {
@@ -121,6 +139,13 @@ img {
   align-items: center;
   color: white;
   font-size: 20px;
+  border-radius: 10px;
+}
+.fresh-life-button a {
+  color:white
+}
+.fresh-life-button:hover {
+  background-color: #e73c0c;
 }
 .fresh-life-headline {
   margin-bottom: 30px;
@@ -150,7 +175,7 @@ img {
 }
 .about-us-paragraph {
   color: white;
-  font-size: 17px;
+  font-size: 18px;
 }
 .about-us-img {
   flex-shrink: 0;
@@ -214,6 +239,7 @@ img {
 }
 .gallery {
   background-color: #ffe92f;
+  padding-bottom: 70px;
 }
 .gallery-content {
   height: 1536px;
@@ -228,7 +254,8 @@ img {
 }
 .gallery-paragraph {
   text-align: center;
-  margin: 50px 300px;
+  margin: 50px 250px;
+  font-size:20px;
 }
 .gallery-images {
   display: flex;
@@ -286,6 +313,7 @@ img {
   align-items: center;
   color: white;
   font-size: 20px;
+  border-radius:10px;
 }
 .subscribe-email-entry {
   width: 570px;
@@ -331,9 +359,17 @@ img {
   flex-direction: column;
   justify-content: space-between;
 }
+.blog-gallery-item:nth-child(2) {
+  transition-delay: 200ms;
+}
+.blog-gallery-item:nth-child(3) {
+  transition-delay: 400ms;
+}
 .blog-item-photo {
   position: absolute;
+ 
 }
+
 .gallery-item-gradient {
   position: absolute;
   z-index: 2;
@@ -376,6 +412,7 @@ img {
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+  border-radius: 10px;
 }
 .blog-title {
   font-size: 70px;
@@ -793,9 +830,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .logo {
-    margin-bottom: 20px;
-  }
+ 
   .about-us-img {
     display: none;
   }
