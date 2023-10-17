@@ -1,6 +1,7 @@
 const nav_bar = document.getElementById("navigation");
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.querySelector(".sidebar");
+const overlay = document.querySelector(".overlay")
 const slide_in_elements = document.querySelectorAll(
   ".hidden-left,.hidden-right,.hidden-down,.hidden-hero"
 );
@@ -45,4 +46,5 @@ document.addEventListener("scrollend", (event) => {
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   sidebar.classList.toggle("sidebar-active");
+  overlay.classList.toggle("overlay-active");
 });
