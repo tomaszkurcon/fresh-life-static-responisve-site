@@ -1,3 +1,6 @@
+:root {
+  --teal: #00b0b0;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -21,55 +24,62 @@ q {
 }
 a {
   text-decoration: none;
-  color:black
+  color: black;
 }
 .container {
   width: 100%;
   margin: 0 auto;
 }
 .section {
-    scroll-margin-top: 100px;
+  scroll-margin-top: 100px;
+}
+#newsletter {
+  scroll-margin-top: 200px;
 }
 .hidden-hero {
-  opacity:0;
-  filter:blur(5px);
-  transform:translateX(-15%);
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-15%);
   transition: transform 0.7s, filter 0.7s, opacity 2s;
 }
 .hidden-left {
-  opacity:0;
-  filter:blur(5px);
-  transform:translateX(-50%);
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-50%);
   transition: transform 0.7s, filter 0.7s, opacity 2s;
 }
 .hidden-right {
-  opacity:0;
-  filter:blur(5px);
-  transform:translateX(50%);
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(50%);
   transition: transform 0.7s, filter 0.7s, opacity 2s;
 }
 .hidden-down {
-  opacity:0;
-  filter:blur(5px);
-  transform:translateY(50%);
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
   transition: transform 0.7s, filter 0.7s, opacity 2s;
 }
 .show {
-    opacity:1;
-    filter:blur(0);
-    transform:translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
 .page-nav {
   position: sticky;
-  top:0;
+  top: 0;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
   z-index: 10;
   transition: background-color 0.3s;
   transition-timing-function: ease-in-out;
 }
+
 .transparency {
   background-color: rgba(255, 255, 255, 0.3);
+}
+.nav-menu {
+  display: none;
 }
 .nav-menu-list {
   list-style: none;
@@ -81,11 +91,11 @@ a {
 }
 
 .nav-menu-list a:hover {
-  color: #00b0b0;
+  color: var(--teal);
 }
 .active a {
-  color: #00b0b0;
-  border-bottom: 2px solid #00b0b0;
+  color: var(--teal);
+  border-bottom: 2px solid var(--teal);
 }
 .nav-menu-list li:last-child {
   margin-right: 0px;
@@ -104,8 +114,8 @@ a {
 }
 
 .logo {
-  width:200px;
-  display:flex;
+  width: 200px;
+  display: flex;
   align-items: center;
 }
 .fresh-life {
@@ -142,7 +152,7 @@ a {
   border-radius: 10px;
 }
 .fresh-life-button a {
-  color:white
+  color: white;
 }
 .fresh-life-button:hover {
   background-color: #e73c0c;
@@ -168,6 +178,7 @@ a {
   justify-content: space-between;
   align-items: center;
   height: 700px;
+  overflow: hidden;
 }
 .about-us-headline {
   font-size: 60px;
@@ -255,7 +266,7 @@ a {
 .gallery-paragraph {
   text-align: center;
   margin: 50px 250px;
-  font-size:20px;
+  font-size: 20px;
 }
 .gallery-images {
   display: flex;
@@ -313,7 +324,7 @@ a {
   align-items: center;
   color: white;
   font-size: 20px;
-  border-radius:10px;
+  border-radius: 10px;
 }
 .subscribe-email-entry {
   width: 570px;
@@ -367,7 +378,6 @@ a {
 }
 .blog-item-photo {
   position: absolute;
- 
 }
 
 .gallery-item-gradient {
@@ -692,13 +702,10 @@ footer {
   .nav-line {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
-  .logo {
-    margin-bottom: 20px;
-  }
+
   .about-us-img {
     display: none;
   }
@@ -743,6 +750,7 @@ footer {
     max-width: 540px;
     margin: 0 auto;
   }
+
   .gallery-images {
     display: flex;
     align-items: center;
@@ -823,14 +831,7 @@ footer {
   .fresh-life-description {
     width: 70%;
   }
-  .nav-line {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
- 
+
   .about-us-img {
     display: none;
   }
@@ -866,6 +867,22 @@ footer {
   .container {
     max-width: 720px;
   }
+  .nav-menu {
+    display: block;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  #hamburger {
+    display: none;
+  }
+  .nav-line {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (min-width: 992px) {
@@ -890,6 +907,9 @@ footer {
     width: 570px;
     margin: 30px 0;
     font-size: 17px;
+  }
+  .logo {
+    margin-bottom: 0;
   }
   .subscribe-email-entry {
     width: 570px;
