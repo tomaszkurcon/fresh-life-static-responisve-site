@@ -1,0 +1,47 @@
+body {
+  overflow-x: hidden;
+}
+#notifications {
+}
+.notification {
+  position: fixed;
+  width: 400px;
+  height: 100px;
+  background-color: white;
+  max-width: 60%;
+  border-radius: 10px;
+  bottom: 30px;
+  text-wrap: wrap;
+  right: 30px;
+  padding: 15px;
+  padding-right: 20px;
+  z-index: 1000;
+  box-shadow: 4px 5px 57px -4px rgba(66, 68, 90, 1);
+  animation: smooth-append 5s ease-in-out forwards;
+  display: flex;
+  justify-content: space-between;
+  /* transition: all 0.2s ease-in-out; */
+}
+.notification-icon {
+  color: rgb(29, 186, 29);
+  margin-top: 5px;
+}
+
+@keyframes smooth-append {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0%);
+  }
+  20% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

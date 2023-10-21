@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/mobile-nav.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/notifications.css"/>
+    <script src="https://kit.fontawesome.com/36419b9715.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <section id="notifications">
+
+    </section>
     <nav id="navigation" class="page-nav">
       <div class="container">
         <div class="nav-line">
@@ -61,9 +67,9 @@
                 with Fresh Life
               </q>
             </div>
-            <div class="fresh-life-button">
-              <a href="#about-us">Let's Start</a>
-            </div>
+            <a href="#about-us" class="fresh-life-button">
+              Let's start
+            </a>
           </div>
         </div>
       </div>
@@ -150,7 +156,44 @@
               wholesome diet, highlighting the essence of holistic well-being.
             </p>
           </div>
-          <div class="gallery-images">
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="images/item1.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="images/item2-1.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="images/item3.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="images/item2-2.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="images/item4.png" style="width:100%">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+          <!-- <div class="gallery-images">
             <div class="gallery-item1 gallery-img">
               <img src="images/item1.png" />
             </div>
@@ -168,7 +211,7 @@
             <div class="gallery-item4 gallery-img">
               <img src="images/item4.png" />
             </div>
-          </div>
+          </div> -->
           <!-- <div class="gallery-view-more">
                     VIEW MORE
                 </div> -->
@@ -191,16 +234,19 @@
                 informed, making each day your best day.
               </p>
             </div>
-            <div class="subscribe-form">
-              <div class="subscribe-email">
+            <form name="newsletter" class="subscribe-form">
+            
                 <input
-                  type="text"
+                  type="email"
+                  name="email"
                   placeholder="Your email address..."
+                  required
                   class="subscribe-email-entry"
                 />
-              </div>
-              <div class="subscribe-button">SUBSCRIBE</div>
-            </div>
+         
+              <button type="submit" class="subscribe-button">SUBSCRIBE</button>
+            
+            </form>
           </div>
         </div>
       </div>
@@ -220,7 +266,7 @@
               </p>
             </div>
             <div class="blog-gallery">
-              <div class="blog-gallery-item hidden-down">
+              <a href="#blog" class="blog-gallery-item hidden-down">
                 <div class="gallery-item-gradient"></div>
                 <div class="blog-item-photo">
                   <img src="images/blog-item1.png" />
@@ -235,8 +281,8 @@
                   <h3>Green Goodness: The Ultimate Vegetable Shake Recipe</h3>
                   <p class="gallery-item-sign">By Adam - 2 hours ago</p>
                 </div>
-              </div>
-              <div class="blog-gallery-item hidden-down">
+              </a>
+              <a href="#blog" class="blog-gallery-item hidden-down">
                 <div class="gallery-item-gradient"></div>
                 <div class="blog-item-photo">
                   <img src="images/blog-item2.png" />
@@ -253,8 +299,8 @@
                   </h3>
                   <p class="gallery-item-sign">By Roman - 3 days ago</p>
                 </div>
-              </div>
-              <div class="blog-gallery-item hidden-down">
+              </a>
+              <a href="#blog" class="blog-gallery-item hidden-down">
                 <div class="gallery-item-gradient"></div>
                 <div class="blog-item-photo">
                   <img src="images/blog-item3.png" />
@@ -272,11 +318,12 @@
                   </h3>
                   <p class="gallery-item-sign">By Tomek - 1 week ago</p>
                 </div>
-              </div>
+              </a>
+              
             </div>
-            <div class="blog-gallery-view">
-              <p>Start reading</p>
-            </div>
+            <button class="blog-view-more-button">
+              View more
+            </button>
           </div>
         </div>
       </div>
@@ -296,31 +343,37 @@
             </div>
           </div>
           <div class="contact-form-contact-details">
-            <div class="contact-form">
+            <form name="contact_form" class="contact-form">
               <div class="form form1">
-                <p>Auskteez Tran</p>
+                <p>Contact form</p>
               </div>
-              <input type="text" class="form" placeholder="Your email..." />
+              <input name="email" type="email" class="form" required placeholder="Your email..." />
 
               <input
-                type="text"
+                name="phone_number"
+                pattern="^\d{9}$"
+                title="Valid phone number should consist of 9 numbers"
+                required
                 class="form"
                 placeholder="Your phone number..."
               />
 
               <textarea
+                name="message"
+                type="text"
                 class="form form-message"
                 placeholder="Your message..."
               ></textarea>
-            </div>
+              <button type="submit" class="contact-button">Send</button>
+            </form>
             <div class="contact-details">
               <div class="contact-content">
                 <b>ADDRESS</b><br />
-                123 City name, Street, City, Country
+                221B Baker Street, Marylebone, London, United Kingdom
               </div>
               <div class="contact-content">
                 <b>EMAIL</b><br />
-                cahee@domain.com
+                freshlife@domain.com
               </div>
               <div class="contact-content">
                 <b>PHONE</b><br />
@@ -338,7 +391,7 @@
             <p>	&#x24D2 201<span class="footer-five">5</span> Company. All right reserved.</p>
           </div>
           <div class="footer-logo">
-            <p>Cakee</p>
+            <p>Fresh Life &lt3 </p>
           </div>
           <div class="footer-author">
             <p>Made with <span class="footer-love">love</span> by Tomek</p>
@@ -348,5 +401,6 @@
     </footer>
     <script src="./js/helpers.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/slider.js"></script>
   </body>
 </html>

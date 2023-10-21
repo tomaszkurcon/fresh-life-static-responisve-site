@@ -33,6 +33,7 @@ a {
 .section {
   scroll-margin-top: 100px;
 }
+
 #newsletter {
   scroll-margin-top: 200px;
 }
@@ -228,11 +229,18 @@ a {
   margin-bottom: 5px;
   margin-left: 100px;
   box-shadow: 0px 25px 40px -25px rgba(66, 68, 90, 1);
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.our-service-button:hover {
+  color: var(--teal);
+  box-shadow: 0px 25px 40px -25px var(--teal);
+  animation: bouncing 1s infinite;
 }
 .button-content {
   width: 300px;
   height: 100px;
-  border-right: 1px solid gray;
+  border-right: 1px solid rgba(208, 205, 205, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -316,6 +324,7 @@ a {
   display: flex;
 }
 .subscribe-button {
+  border-style: none;
   width: 170px;
   height: 55px;
   background-color: #96b92c;
@@ -325,6 +334,11 @@ a {
   color: white;
   font-size: 20px;
   border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+.subscribe-button:hover {
+  background-color: #81a023;
 }
 .subscribe-email-entry {
   width: 570px;
@@ -369,6 +383,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .blog-gallery-item:nth-child(2) {
   transition-delay: 200ms;
@@ -412,7 +428,7 @@ a {
 .gallery-item-sign {
   margin-top: 26px;
 }
-.blog-gallery-view {
+.blog-view-more-button {
   width: 200px;
   height: 55px;
   background-color: #f72b3b;
@@ -423,6 +439,11 @@ a {
   align-items: center;
   margin-top: 40px;
   border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
+}
+.blog-view-more-button:hover {
+  background-color: #e42939;
 }
 .blog-title {
   font-size: 70px;
@@ -430,9 +451,10 @@ a {
 }
 .contact {
   background-image: url("../images/contact-background.png");
-  height: 866px;
+  height: 970px;
   background-position: center;
   background-size: cover;
+  padding-top: 50px;
 }
 .contact-content-container {
   height: 864px;
@@ -454,6 +476,21 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.contact-button {
+  border-style: none;
+  width: 170px;
+  height: 55px;
+  background-color: rgba(0, 196, 196, 0.7);
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 25px;
+}
+.contact-button:hover {
+  background-color: rgba(0, 196, 196, 1);
 }
 .contact-paragraph {
   font-size: 17px;
@@ -679,7 +716,7 @@ footer {
   .blog-item-photo {
     width: 100%;
   }
-  .blog-gallery-view {
+  .blog-view-more-button {
     margin-bottom: 40px;
   }
   .blog-title {
@@ -810,7 +847,7 @@ footer {
   .blog-item-photo {
     width: 100%;
   }
-  .blog-gallery-view {
+  .blog-view-more-button {
     margin-bottom: 40px;
   }
   .blog-title {
@@ -1008,7 +1045,7 @@ footer {
     font-size: 70px;
     margin: 0;
   }
-  .blog-gallery-view {
+  .blog-view-more-button {
     margin: 0;
     margin-top: 40px;
   }
@@ -1020,5 +1057,14 @@ footer {
   }
   .about-us-img {
     margin-right: 150px;
+  }
+}
+
+@keyframes bouncing {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
