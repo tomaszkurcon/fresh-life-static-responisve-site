@@ -1,3 +1,4 @@
+const notifications = document.getElementById("notifications");
 const id_section_to_number = (section) => {
   switch (section) {
     case "fresh-life":

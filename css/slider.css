@@ -6,13 +6,13 @@
     margin: auto;
   }
   
-  .mySlides {
+  .my-slides {
     display: none;
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
   }
-  .mySlides img {
+  .my-slides img {
     object-fit: contain;
     background-position: center;
   }

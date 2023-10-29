@@ -1,8 +1,13 @@
 const nav_bar = document.getElementById("navigation");
 const hamburger = document.getElementById("hamburger");
-const notifications = document.getElementById("notifications");
 const sidebar = document.querySelector(".sidebar");
 const overlay = document.querySelector(".overlay");
+const view_more_button = document.getElementById("view-more-button");
+const additional_content = document.querySelectorAll(
+  ".additional-blog-gallery-item"
+);
+const blog_section = document.getElementById("blog");
+
 const slide_in_elements = document.querySelectorAll(
   ".hidden-left,.hidden-right,.hidden-down,.hidden-hero"
 );
@@ -64,10 +69,9 @@ newsletter_form.addEventListener("submit", (event) => {
   newsletter_form.elements.email.value = "";
 });
 
-//extracting data from contact form, saving it to local storage and creating notification 
+//extracting data from contact form, saving it to local storage and creating notification
 contact_form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(contact_form.elements);
   const email = contact_form.elements.email.value;
   const phoneNumber = contact_form.elements.phone_number.value;
   const message = contact_form.elements.message.value;
@@ -78,5 +82,27 @@ contact_form.addEventListener("submit", (event) => {
   };
   localStorage.setItem("user_data", JSON.stringify(user));
   createNotification(`Thank you for writing to us! We will respond ASAP!`);
-
 });
+
+const manage_content = () => {
+  if (view_more_button.textContent == "View more") {
+    additional_content.forEach((article) => {
+      article.style.display = "flex";
+      article.style.maxHeight = article.scrollHeight + "px";
+      article.style.opacity = 1;
+    });
+    view_more_button.textContent = "Hide";
+  } else {
+    additional_content.forEach((article) => {
+      article.style.maxHeight = 0;
+      article.style.opacity = 0;
+      setTimeout(() => {
+        article.style.display = "none";
+      }, 400);
+    });
+    window.scroll({
+      top: blog_section.offsetTop - 150,
+    });
+    view_more_button.textContent = "View more";
+  }
+};
